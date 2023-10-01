@@ -31,7 +31,6 @@ int main(){
     
 
     add_aluno(alunos, limite);
-    listar_notas(alunos);
     altera_nota(alunos);
     listar_notas(alunos);
 
@@ -86,7 +85,6 @@ void add_aluno(vector<Aluno>& alunos, int tamanho) {
 
 }
 
-
 void listar_notas(vector<Aluno>& alunos){
     float media = 0.0;
     string resultado;
@@ -119,6 +117,7 @@ void altera_nota(vector<Aluno>& alunos){
     char altera_nota, deseja_alterar;
     int index,  tamanho = alunos.size();
 
+    listar_notas(alunos);
 
     do{
         cout << "Deseja alterar alguma nota (s/n)?";
